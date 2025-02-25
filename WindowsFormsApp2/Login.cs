@@ -52,8 +52,9 @@ namespace WindowsFormsApp2
             // Gọi hàm VerifyLogin để kiểm tra đăng nhập
             if (VerifyLogin(txtUsername.Text, txtPassword.Text))
             {
-                MessageBox.Show("Ok, next time will be go to Main Menu of App");
-                this.DialogResult = DialogResult.OK;
+                MainForm mainForm = new MainForm();
+                mainForm.Show(this);
+                this.Hide();
             }
             else
             {
@@ -67,6 +68,26 @@ namespace WindowsFormsApp2
             Close();
         }
 
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Account account = new Account();    
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text.Trim();
 
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Username and Password cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (account.RegisterUser(username,password))
+            {
+                MessageBox.Show("New user registered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error registering user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
