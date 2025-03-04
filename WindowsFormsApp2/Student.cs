@@ -42,5 +42,14 @@ namespace WindowsFormsApp2
                 return false;
             }
         }
+
+        public DataTable getStudents(SqlCommand command)
+        {
+            command.Connection = mydb.getConnection;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
     }
 }

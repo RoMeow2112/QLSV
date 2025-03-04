@@ -114,3 +114,5 @@ C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\System.D
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\System.Data.SqlClient.xml
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddStudentForm.resources
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.MainForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.studentListForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UpdateDeleteStudentForm.resources

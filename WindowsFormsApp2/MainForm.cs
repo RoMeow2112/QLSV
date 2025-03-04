@@ -22,5 +22,11 @@ namespace WindowsFormsApp2
             AddStudentForm addSf = new AddStudentForm();
             addSf.Show(this);
         }
+
+        private void studentListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            studentListForm studentListForm = new studentListForm();
+            studentListForm.Show(this);
+        }
     }
 }

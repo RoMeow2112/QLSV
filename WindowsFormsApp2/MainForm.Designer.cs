@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sTUDENTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cOURSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sCOREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewStudentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.studentListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.staticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRemoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageStudentFormToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOURSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sCOREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,18 +68,6 @@
             this.sTUDENTToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.sTUDENTToolStripMenuItem.Text = "STUDENT";
             // 
-            // cOURSEToolStripMenuItem
-            // 
-            this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
-            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.cOURSEToolStripMenuItem.Text = "COURSE";
-            // 
-            // sCOREToolStripMenuItem
-            // 
-            this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
-            this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.sCOREToolStripMenuItem.Text = "SCORE";
-            // 
             // addNewStudentToolStripMenuItem
             // 
             this.addNewStudentToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -90,11 +78,6 @@
             this.addNewStudentToolStripMenuItem.Text = "Add New Student";
             this.addNewStudentToolStripMenuItem.Click += new System.EventHandler(this.addNewStudentToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // studentListToolStripMenuItem
             // 
             this.studentListToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
@@ -103,6 +86,7 @@
             this.studentListToolStripMenuItem.Name = "studentListToolStripMenuItem";
             this.studentListToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.studentListToolStripMenuItem.Text = "Student List";
+            this.studentListToolStripMenuItem.Click += new System.EventHandler(this.studentListToolStripMenuItem_Click);
             // 
             // staticsToolStripMenuItem
             // 
@@ -139,6 +123,23 @@
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.printToolStripMenuItem.Text = "Print";
+            // 
+            // cOURSEToolStripMenuItem
+            // 
+            this.cOURSEToolStripMenuItem.Name = "cOURSEToolStripMenuItem";
+            this.cOURSEToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.cOURSEToolStripMenuItem.Text = "COURSE";
+            // 
+            // sCOREToolStripMenuItem
+            // 
+            this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
+            this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.sCOREToolStripMenuItem.Text = "SCORE";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
