@@ -145,6 +145,7 @@
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(213, 20);
             this.txtStudentID.TabIndex = 8;
+            this.txtStudentID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStudentID_KeyPress);
             // 
             // TextBoxFname
             // 
@@ -152,6 +153,7 @@
             this.TextBoxFname.Name = "TextBoxFname";
             this.TextBoxFname.Size = new System.Drawing.Size(213, 20);
             this.TextBoxFname.TabIndex = 9;
+            this.TextBoxFname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxFname_KeyPress);
             // 
             // TextBoxLname
             // 
@@ -159,6 +161,7 @@
             this.TextBoxLname.Name = "TextBoxLname";
             this.TextBoxLname.Size = new System.Drawing.Size(213, 20);
             this.TextBoxLname.TabIndex = 10;
+            this.TextBoxLname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxLname_KeyPress);
             // 
             // DateTimePicker1
             // 
@@ -208,6 +211,7 @@
             this.TextBoxPhone.Name = "TextBoxPhone";
             this.TextBoxPhone.Size = new System.Drawing.Size(213, 20);
             this.TextBoxPhone.TabIndex = 15;
+            this.TextBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxPhone_KeyPress);
             // 
             // TextBoxAddress
             // 

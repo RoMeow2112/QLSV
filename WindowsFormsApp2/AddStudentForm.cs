@@ -43,13 +43,18 @@ namespace WindowsFormsApp2
             int born_year = DateTimePicker1.Value.Year;
             int this_year = DateTime.Now.Year;
 
-            // Check age between 10 and 100 years
             if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
             {
                 MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (verif())
             {
+                if (student.checkID(id))
+                {
+                    MessageBox.Show("This ID already exists. Please enter a different ID!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    return;
+                }
                 PictureBoxStudentImage.Image.Save(pic, PictureBoxStudentImage.Image.RawFormat);
                 if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
                 {
@@ -89,6 +94,38 @@ namespace WindowsFormsApp2
             if ((opf.ShowDialog() == DialogResult.OK))
             {
                 PictureBoxStudentImage.Image = Image.FromFile(opf.FileName);
+            }
+        }
+
+        private void txtStudentID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBoxFname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBoxLname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBoxPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

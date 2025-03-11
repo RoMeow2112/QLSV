@@ -67,6 +67,7 @@
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(221, 20);
             this.textBoxPhone.TabIndex = 7;
+            this.textBoxPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhone_KeyPress);
             // 
             // pictureBoxStudentImage
             // 
@@ -221,6 +222,7 @@
             this.textBoxFname.Name = "textBoxFname";
             this.textBoxFname.Size = new System.Drawing.Size(222, 20);
             this.textBoxFname.TabIndex = 21;
+            this.textBoxFname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxFname_KeyPress);
             // 
             // textBoxLname
             // 
@@ -228,6 +230,7 @@
             this.textBoxLname.Name = "textBoxLname";
             this.textBoxLname.Size = new System.Drawing.Size(221, 20);
             this.textBoxLname.TabIndex = 22;
+            this.textBoxLname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLname_KeyPress);
             // 
             // textBoxAddress
             // 

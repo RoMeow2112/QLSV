@@ -9,7 +9,7 @@ namespace QLSV
 {
     class MY_DB
     {
-        SqlConnection con = new SqlConnection(@"Server=DESKTOP-KR5CTG2;Database=QLSV;Integrated Security=True;");
+        SqlConnection con = new SqlConnection(@"Server=KHARIS;Database=QLSV;Integrated Security=True;");
 
         // get the connection
         public SqlConnection getConnection

@@ -19,7 +19,6 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        // Tạo hàm VerifyLogin để xác thực đăng nhập
         private bool VerifyLogin(string username, string password)
         {
             MY_DB db = new MY_DB();
@@ -35,24 +34,21 @@ namespace WindowsFormsApp2
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            // Kiểm tra xem có dữ liệu không
-            return table.Rows.Count > 0; // Nếu có dữ liệu, trả về true, nếu không trả về false
+            return table.Rows.Count > 0; 
         }
 
-        // Sự kiện btnLogin_Click gọi hàm VerifyLogin
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Kiểm tra nếu tên đăng nhập hoặc mật khẩu trống
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Please enter both Username and Password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // Dừng phương thức nếu thiếu thông tin
+                return; 
             }
 
-            // Gọi hàm VerifyLogin để kiểm tra đăng nhập
             if (VerifyLogin(txtUsername.Text, txtPassword.Text))
             {
                 MainForm mainForm = new MainForm();
+                mainForm.FormClosed += (s, args) => Application.Exit();
                 mainForm.Show(this);
                 this.Hide();
             }
@@ -70,24 +66,51 @@ namespace WindowsFormsApp2
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Account account = new Account();    
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
+            string confirmPassword = txtConfirmPassword.Text.Trim();
 
-            if (username == "" || password == "")
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Username and Password cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (account.RegisterUser(username,password))
+            if (checkBoxRegister.Checked)
             {
-                MessageBox.Show("New user registered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (string.IsNullOrEmpty(confirmPassword))
+                {
+                    MessageBox.Show("Please confirm your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (password != confirmPassword)
+                {
+                    MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Account account = new Account();
+                if (account.RegisterUser(username, password))
+                {
+                    MessageBox.Show("New user registered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error registering user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Error registering user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please check 'Register' to register.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void checkBoxRegister_CheckedChanged(object sender, EventArgs e)
+        {
+            bool isChecked = checkBoxRegister.Checked;
+            label4.Visible = isChecked;
+            txtConfirmPassword.Visible = isChecked;
         }
     }
 }

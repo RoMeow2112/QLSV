@@ -17,6 +17,7 @@ namespace WindowsFormsApp2
         // function to insert a new student
         public bool insertStudent(int Id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
         {
+
             SqlCommand command = new SqlCommand("INSERT INTO student (id, fname, lname, bdate, gender, phone, address, picture)" +
                 " VALUES (@id, @fn, @ln, @bdt, @gen, @phn, @adrs, @pic)", mydb.getConnection);
 
@@ -43,6 +44,7 @@ namespace WindowsFormsApp2
             }
         }
 
+
         public DataTable getStudents(SqlCommand command)
         {
             command.Connection = mydb.getConnection;
@@ -51,5 +53,19 @@ namespace WindowsFormsApp2
             adapter.Fill(table);
             return table;
         }
+
+        public bool checkID(int id)
+        {
+            SqlCommand command = new SqlCommand("SELECT * FROM student WHERE id = @id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+
+            return (table.Rows.Count > 0); // true nếu ID đã tồn tại
+        }
+
+
     }
 }
