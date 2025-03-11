@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nguye\\source\\repos\\QLSV\\",
+  "WorkspaceRootPath": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\qlsv\\windowsformsapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\QLSV\\windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\QLSV\\windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\QLSV\\windowsformsapp2\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\QLSV\\windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\QLSV\\windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\addstudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,11 +42,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AddStudentForm.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\AddStudentForm.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddStudentForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\AddStudentForm.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\AddStudentForm.cs",
+              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddStudentForm.cs",
               "RelativeToolTip": "WindowsFormsApp2\\AddStudentForm.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAwCoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -54,34 +54,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AddStudentForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\AddStudentForm.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\AddStudentForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\AddStudentForm.cs",
               "ToolTip": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\AddStudentForm.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\AddStudentForm.cs [Design]",
+              "RelativeToolTip": "..\\QLSV\\WindowsFormsApp2\\AddStudentForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T07:40:46.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Student.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Student.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Student.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Student.cs",
+              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Student.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Student.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwBIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAswBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T07:35:29.139Z"
+              "WhenOpened": "2025-03-11T07:35:29.139Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Program.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Program.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Program.cs",
+              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Program.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -92,24 +93,26 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Login.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Login.cs",
+              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Login.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAADgv2sAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T07:07:15.967Z"
+              "WhenOpened": "2025-03-11T07:07:15.967Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Login.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Login.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\QLSV\\WindowsFormsApp2\\Login.cs [Design]",
+              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp2\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T07:07:14.543Z"
+              "WhenOpened": "2025-03-11T07:07:14.543Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
