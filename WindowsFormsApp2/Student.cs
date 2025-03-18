@@ -66,6 +66,36 @@ namespace WindowsFormsApp2
             return (table.Rows.Count > 0); // true nếu ID đã tồn tại
         }
 
+        // UPDATE
+        public bool updateStudent(int id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
+        {
+            SqlCommand command = new SqlCommand("UPDATE student SET fname=@fn, lname=@ln, bdate=@bd, gender=@gen, phone=@ph, address=@ad, picture=@pic WHERE id=@id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+            command.Parameters.Add("@fn", SqlDbType.VarChar).Value = fname;
+            command.Parameters.Add("@ln", SqlDbType.VarChar).Value = lname;
+            command.Parameters.Add("@bd", SqlDbType.Date).Value = bdate;
+            command.Parameters.Add("@gen", SqlDbType.VarChar).Value = gender;
+            command.Parameters.Add("@ph", SqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@ad", SqlDbType.Text).Value = address;
+            command.Parameters.Add("@pic", SqlDbType.Image).Value = picture.ToArray();
+
+            mydb.openConnection();
+            bool result = command.ExecuteNonQuery() == 1;
+            mydb.closeConnection();
+            return result;
+        }
+
+        // DELETE
+        public bool deleteStudent(int id)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM student WHERE id=@id", mydb.getConnection);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+
+            mydb.openConnection();
+            bool result = command.ExecuteNonQuery() == 1;
+            mydb.closeConnection();
+            return result;
+        }
 
     }
 }

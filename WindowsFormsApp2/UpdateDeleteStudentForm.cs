@@ -121,5 +121,70 @@ namespace WindowsFormsApp2
                 e.Handled = true;
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (!int.TryParse(textBoxID.Text, out id))
+            {
+                MessageBox.Show("Not found ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string fname = textBoxFname.Text;
+            string lname = textBoxLname.Text;
+            DateTime bdate = dateTimePicker1.Value;
+            string phone = textBoxPhone.Text;
+            string address = textBoxAddress.Text;
+            string gender = radioButtonMale.Checked ? "Male" : "Female";
+
+            MemoryStream picture = new MemoryStream();
+            pictureBoxStudentImage.Image.Save(picture, pictureBoxStudentImage.Image.RawFormat);
+
+            if (new Student().updateStudent(id, fname, lname, bdate, gender, phone, address, picture))
+            {
+                MessageBox.Show("Student information updated successfully", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error while updating student", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int id;
+            if (!int.TryParse(textBoxID.Text, out id))
+            {
+                MessageBox.Show("Not found ID", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            DialogResult result = MessageBox.Show("Are you sure to delete this student?", "Delete Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (new Student().deleteStudent(id))
+                {
+                    MessageBox.Show("Delete", "Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Error", "Delete Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void clearFields()
+        {
+            textBoxID.Clear();
+            textBoxFname.Clear();
+            textBoxLname.Clear();
+            textBoxPhone.Clear();
+            textBoxAddress.Clear();
+            dateTimePicker1.Value = DateTime.Now;
+            radioButtonMale.Checked = true;
+            pictureBoxStudentImage.Image = null;
+        }
     }
 }

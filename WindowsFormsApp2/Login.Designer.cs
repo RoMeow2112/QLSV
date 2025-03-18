@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.checkBoxRegister = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -186,6 +188,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "19110085_NguyenTranKhai";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +208,7 @@
         private System.Windows.Forms.CheckBox checkBoxRegister;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

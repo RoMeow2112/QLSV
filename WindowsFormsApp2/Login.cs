@@ -112,5 +112,13 @@ namespace WindowsFormsApp2
             label4.Visible = isChecked;
             txtConfirmPassword.Visible = isChecked;
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(txtUsername, "Nhập tên đăng nhập");
+            toolTip1.SetToolTip(txtPassword, "Nhập mật khẩu của bạn");
+            toolTip1.SetToolTip(btnLogin, "Nhấn để đăng nhập");
+        }
+
     }
 }

@@ -70,6 +70,52 @@ namespace WindowsFormsApp2
         {
             studentListForm_Load(sender, e);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Text Files (*.txt)|*.txt";
+            sfd.FileName = "student_list.txt";
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(sfd.FileName))
+                {
+                    // Ghi tiêu đề cột
+                    string header =
+                        "ID".PadRight(10) +
+                        "First Name".PadRight(13) +
+                        "Last Name".PadRight(13) +
+                        "Birthdate".PadRight(22) +
+                        "Gender".PadRight(9) +
+                        "Phone".PadRight(13) +
+                        "Address";
+                    sw.WriteLine(header);
+                    sw.WriteLine(new string('-', 90));
+
+                    // Ghi từng dòng dữ liệu
+                    for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                    {
+                        var row = dataGridView1.Rows[i];
+                        if (!row.IsNewRow)
+                        {
+                            string line =
+                                row.Cells[0].Value.ToString().PadRight(10) +
+                                row.Cells[1].Value.ToString().PadRight(13) +
+                                row.Cells[2].Value.ToString().PadRight(13) +
+                                Convert.ToDateTime(row.Cells[3].Value).ToString("M/d/yyyy hh:mm tt").PadRight(22) +
+                                row.Cells[4].Value.ToString().PadRight(9) +
+                                row.Cells[5].Value.ToString().PadRight(13) +
+                                row.Cells[6].Value.ToString();
+
+                            sw.WriteLine(line);
+                        }
+                    }
+
+                    MessageBox.Show("Lưu file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
     }
     }
 
