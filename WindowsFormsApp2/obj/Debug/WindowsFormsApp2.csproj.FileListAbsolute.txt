@@ -234,3 +234,6 @@ C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csp
 C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsF.EA766B00.Up2Date
 C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.StaticsForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PrintForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ManageStudentForm.resources

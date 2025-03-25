@@ -28,5 +28,29 @@ namespace WindowsFormsApp2
             studentListForm studentListForm = new studentListForm();
             studentListForm.Show(this);
         }
+
+        private void staticsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StaticsForm statics = new StaticsForm();
+            statics.Show(this);
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrintForm printForm = new PrintForm();
+            printForm.Show(this);
+        }
+
+        private void editRemoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateDeleteStudentForm updateDeleteStudentForm = new UpdateDeleteStudentForm();
+            updateDeleteStudentForm.Show(this);
+        }
+
+        private void manageStudentFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageStudentForm manageStudentForm = new ManageStudentForm();
+            manageStudentForm.Show(this);
+        }
     }
 }

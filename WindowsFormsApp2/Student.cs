@@ -97,5 +97,33 @@ namespace WindowsFormsApp2
             return result;
         }
 
+        public int totalStudent()
+        {
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM student", mydb.getConnection);
+            mydb.openConnection();
+            int count = (int)command.ExecuteScalar();
+            mydb.closeConnection();
+            return count;
+        }
+
+        // Lấy tổng số sinh viên nam
+        public int totalMaleStudent()
+        {
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM student WHERE gender = 'Male'", mydb.getConnection);
+            mydb.openConnection();
+            int count = (int)command.ExecuteScalar();
+            mydb.closeConnection();
+            return count;
+        }
+
+        // Lấy tổng số sinh viên nữ
+        public int totalFemaleStudent()
+        {
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM student WHERE gender = 'Female'", mydb.getConnection);
+            mydb.openConnection();
+            int count = (int)command.ExecuteScalar();
+            mydb.closeConnection();
+            return count;
+        }
     }
 }

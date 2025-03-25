@@ -3,28 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\studentlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\updatedeletestudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\updatedeletestudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|c:\\users\\nguye\\source\\repos\\windowsformsapp2\\windowsformsapp2\\managestudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4C4CC5A-1FBC-4FB8-8583-6754F3E0D5C7}|WindowsFormsApp2\\WindowsFormsApp2.csproj|solutionrelative:windowsformsapp2\\managestudentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,77 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Program.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Program.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Program.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Title": "ManageStudentForm.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\ManageStudentForm.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\ManageStudentForm.cs",
+              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\ManageStudentForm.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\ManageStudentForm.cs",
+              "ViewState": "AgIAAPIAAAAAAAAAAADwvwcBAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T11:21:08.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Login.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\Login.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAqwHcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T11:19:52.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Login.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Login.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T11:19:15.38Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "studentListForm.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\studentListForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\studentListForm.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\studentListForm.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\studentListForm.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAcwHQAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T11:10:19.593Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "studentListForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\studentListForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\studentListForm.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\studentListForm.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\studentListForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T11:10:17.217Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateDeleteStudentForm.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\UpdateDeleteStudentForm.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UpdateDeleteStudentForm.cs",
-              "ToolTip": "C:\\Users\\nguye\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\UpdateDeleteStudentForm.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UpdateDeleteStudentForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T08:32:27.821Z",
+              "WhenOpened": "2025-03-25T08:14:50.972Z",
               "EditorCaption": ""
             }
           ]
