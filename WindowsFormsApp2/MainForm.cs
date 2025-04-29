@@ -52,5 +52,41 @@ namespace WindowsFormsApp2
             ManageStudentForm manageStudentForm = new ManageStudentForm();
             manageStudentForm.Show(this);
         }
+
+        private void aDMINToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AdminForm adminForm = new AdminForm();
+            adminForm.Show(this);
+        }
+
+        private void addCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCourseForm addCourseForm = new AddCourseForm();
+            addCourseForm.Show(this);
+        }
+
+        private void removeCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveCourseForm removeCourseForm = new RemoveCourseForm();
+            removeCourseForm.Show(this);
+        }
+
+        private void editCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCourseForm editCourseForm = new EditCourseForm();
+            editCourseForm.Show(this);
+        }
+
+        private void manageCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageCourseForm manageCourseForm = new ManageCourseForm();
+            manageCourseForm.Show(this);
+        }
+
+        private void printToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            PrintCourseForm printCourseForm = new PrintCourseForm();
+            printCourseForm.Show(this);
+        }
     }
 }

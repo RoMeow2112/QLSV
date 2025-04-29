@@ -15,13 +15,12 @@ namespace WindowsFormsApp2
         MY_DB mydb = new MY_DB();
 
         // function to insert a new student
-        public bool insertStudent(int Id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture)
+        public bool insertStudent(int Id, string fname, string lname, DateTime bdate, string gender, string phone, string address, MemoryStream picture, string email)
         {
+            SqlCommand command = new SqlCommand("INSERT INTO student (id, fname, lname, bdate, gender, phone, address, picture, email)" +
+                " VALUES (@id, @fn, @ln, @bdt, @gen, @phn, @adrs, @pic, @em)", mydb.getConnection);
 
-            SqlCommand command = new SqlCommand("INSERT INTO student (id, fname, lname, bdate, gender, phone, address, picture)" +
-                " VALUES (@id, @fn, @ln, @bdt, @gen, @phn, @adrs, @pic)", mydb.getConnection);
-
-            command.Parameters.Add("@id", SqlDbType.Int).Value = Convert.ToInt32(Id);
+            command.Parameters.Add("@id", SqlDbType.Int).Value = Id;
             command.Parameters.Add("@fn", SqlDbType.VarChar, 50).Value = fname.Trim();
             command.Parameters.Add("@ln", SqlDbType.VarChar, 50).Value = lname.Trim();
             command.Parameters.Add("@bdt", SqlDbType.Date).Value = bdate;
@@ -29,6 +28,7 @@ namespace WindowsFormsApp2
             command.Parameters.Add("@phn", SqlDbType.VarChar, 15).Value = phone.Trim();
             command.Parameters.Add("@adrs", SqlDbType.VarChar, 255).Value = address.Trim();
             command.Parameters.Add("@pic", SqlDbType.Image).Value = picture.ToArray();
+            command.Parameters.Add("@em", SqlDbType.VarChar, 255).Value = email.Trim();
 
             mydb.openConnection();
 

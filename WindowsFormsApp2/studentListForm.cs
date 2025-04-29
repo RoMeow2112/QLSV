@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExcelDataReader;
+using QLSV;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +41,7 @@ namespace WindowsFormsApp2
             dataGridView1.Columns["phone"].HeaderText = "Số Điện Thoại";
             dataGridView1.Columns["address"].HeaderText = "Địa Chỉ";
             dataGridView1.Columns["picture"].HeaderText = "Hình Ảnh";
+            dataGridView1.Columns["email"].HeaderText = "Email";
         }
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -113,6 +116,61 @@ namespace WindowsFormsApp2
                     }
 
                     MessageBox.Show("Lưu file thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Excel Files|*.xlsx;*.xls";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                using (var stream = File.Open(ofd.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (var reader = ExcelDataReader.ExcelReaderFactory.CreateReader(stream))
+                    {
+                        var result = reader.AsDataSet();
+                        var table = result.Tables[0]; // Lấy sheet đầu tiên
+
+                        for (int i = 1; i < table.Rows.Count; i++) // bỏ dòng header
+                        {
+                            try
+                            {
+                                int id = int.Parse(table.Rows[i][0].ToString());
+                                string fname = table.Rows[i][1].ToString();
+                                string lname = table.Rows[i][2].ToString();
+                                DateTime bdate = DateTime.Parse(table.Rows[i][3].ToString());
+                                string gender = table.Rows[i][4].ToString();
+                                string phone = table.Rows[i][5].ToString();
+                                string address = table.Rows[i][6].ToString();
+
+                                // Tạo email tự động từ MSSV
+                                string email = id + "@student.hcmute.edu.vn";
+
+                                
+
+                                // Insert student
+                                if (!student.checkID(id))
+                                {
+                                    string imagePath = Path.Combine(Application.StartupPath, "Images", "default.png");
+                                    byte[] imageBytes = File.ReadAllBytes(imagePath); // phải có file default.png cùng thư mục hoặc xử lý khác
+                                    MemoryStream picture = new MemoryStream(imageBytes);
+
+                                    bool success = student.insertStudent(id, fname, lname, bdate, gender, phone, address, picture, email);
+
+                                    picture.Dispose();
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show($"Lỗi dòng {i + 1}: {ex.Message}");
+                            }
+                        }
+
+                        MessageBox.Show("Import danh sách thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        studentListForm_Load(sender, e); // reload lại danh sách
+                    }
                 }
             }
         }

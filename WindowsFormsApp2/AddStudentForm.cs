@@ -43,6 +43,8 @@ namespace WindowsFormsApp2
             int born_year = DateTimePicker1.Value.Year;
             int this_year = DateTime.Now.Year;
 
+            string email = id.ToString() + "@student.hcmute.edu.vn";
+
             if ((this_year - born_year) < 10 || (this_year - born_year) > 100)
             {
                 MessageBox.Show("The Student Age Must Be Between 10 and 100 year", "Invalid Birth Date", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -56,7 +58,7 @@ namespace WindowsFormsApp2
                     return;
                 }
                 PictureBoxStudentImage.Image.Save(pic, PictureBoxStudentImage.Image.RawFormat);
-                if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
+                if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic, email))
                 {
                     MessageBox.Show("New Student Added", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

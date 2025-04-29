@@ -53,6 +53,7 @@ namespace WindowsFormsApp2
             dataGridView1.Columns["phone"].HeaderText = "Số Điện Thoại";
             dataGridView1.Columns["address"].HeaderText = "Địa Chỉ";
             dataGridView1.Columns["picture"].HeaderText = "Hình Ảnh";
+            dataGridView1.Columns["email"].HeaderText = "Email";
 
             LabelTotalStudents.Text = "Total Students: " + dataGridView1.Rows.Count;
         }
@@ -108,6 +109,8 @@ namespace WindowsFormsApp2
             {
                 gender = "Female";
             }
+            
+            string email = id.ToString() + "@student.hcmute.edu.vn";
 
             MemoryStream pic = new MemoryStream();
             int born_year = DateTimePicker1.Value.Year;
@@ -126,7 +129,7 @@ namespace WindowsFormsApp2
                     return;
                 }
                 PictureBoxStudentImage.Image.Save(pic, PictureBoxStudentImage.Image.RawFormat);
-                if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic))
+                if (student.insertStudent(id, fname, lname, bdate, gender, phone, adrs, pic, email))
                 {
                     MessageBox.Show("New Student Added", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

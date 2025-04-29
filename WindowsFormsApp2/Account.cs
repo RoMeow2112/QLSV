@@ -32,5 +32,39 @@ namespace WindowsFormsApp2
                 }
             }
         }
+
+        public DataTable getAccounts()
+        {
+            SqlCommand command = new SqlCommand("SELECT username, password, status, role FROM account", db.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+
+        public bool updateStatus(string username, string status)
+        {
+            SqlCommand command = new SqlCommand("UPDATE account SET status=@status WHERE username=@username", db.getConnection);
+            command.Parameters.Add("@status", SqlDbType.VarChar).Value = status;
+            command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+
+            db.openConnection();
+            bool success = command.ExecuteNonQuery() == 1;
+            db.closeConnection();
+            return success;
+        }
+
+        // Xóa account
+        public bool deleteAccount(string username)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM account WHERE username=@username", db.getConnection);
+            command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+
+            db.openConnection();
+            bool success = command.ExecuteNonQuery() == 1;
+            db.closeConnection();
+            return success;
+        }
     }
 }
