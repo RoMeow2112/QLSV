@@ -47,6 +47,11 @@
             this.rESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.addScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.avgScoreByCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,6 +206,12 @@
             // 
             // sCOREToolStripMenuItem
             // 
+            this.sCOREToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addScoreToolStripMenuItem,
+            this.removeScoreToolStripMenuItem,
+            this.manageScoreToolStripMenuItem,
+            this.avgScoreByCourseToolStripMenuItem,
+            this.printResultToolStripMenuItem});
             this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
             this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.sCOREToolStripMenuItem.Text = "SCORE";
@@ -222,6 +233,53 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // addScoreToolStripMenuItem
+            // 
+            this.addScoreToolStripMenuItem.BackColor = System.Drawing.Color.Blue;
+            this.addScoreToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addScoreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.addScoreToolStripMenuItem.Name = "addScoreToolStripMenuItem";
+            this.addScoreToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.addScoreToolStripMenuItem.Text = "Add Score";
+            this.addScoreToolStripMenuItem.Click += new System.EventHandler(this.addScoreToolStripMenuItem_Click);
+            // 
+            // removeScoreToolStripMenuItem
+            // 
+            this.removeScoreToolStripMenuItem.BackColor = System.Drawing.Color.Blue;
+            this.removeScoreToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeScoreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.removeScoreToolStripMenuItem.Name = "removeScoreToolStripMenuItem";
+            this.removeScoreToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.removeScoreToolStripMenuItem.Text = "Remove Score";
+            this.removeScoreToolStripMenuItem.Click += new System.EventHandler(this.removeScoreToolStripMenuItem_Click);
+            // 
+            // manageScoreToolStripMenuItem
+            // 
+            this.manageScoreToolStripMenuItem.BackColor = System.Drawing.Color.Blue;
+            this.manageScoreToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageScoreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.manageScoreToolStripMenuItem.Name = "manageScoreToolStripMenuItem";
+            this.manageScoreToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.manageScoreToolStripMenuItem.Text = "Manage Score";
+            // 
+            // avgScoreByCourseToolStripMenuItem
+            // 
+            this.avgScoreByCourseToolStripMenuItem.BackColor = System.Drawing.Color.Blue;
+            this.avgScoreByCourseToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.avgScoreByCourseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.avgScoreByCourseToolStripMenuItem.Name = "avgScoreByCourseToolStripMenuItem";
+            this.avgScoreByCourseToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.avgScoreByCourseToolStripMenuItem.Text = "Avg Score by Course";
+            // 
+            // printResultToolStripMenuItem
+            // 
+            this.printResultToolStripMenuItem.BackColor = System.Drawing.Color.Blue;
+            this.printResultToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printResultToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.printResultToolStripMenuItem.Name = "printResultToolStripMenuItem";
+            this.printResultToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.printResultToolStripMenuItem.Text = "Print Result";
             // 
             // MainForm
             // 
@@ -259,5 +317,10 @@
         private System.Windows.Forms.ToolStripMenuItem editCourseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageCourseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addScoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeScoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageScoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem avgScoreByCourseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printResultToolStripMenuItem;
     }
 }

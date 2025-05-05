@@ -88,5 +88,17 @@ namespace WindowsFormsApp2
             PrintCourseForm printCourseForm = new PrintCourseForm();
             printCourseForm.Show(this);
         }
+
+        private void addScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddScoreForm addScoreForm = new AddScoreForm();
+            addScoreForm.Show(this);
+        }
+
+        private void removeScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveScoreForm removeScoreForm = new RemoveScoreForm();
+            removeScoreForm.Show(this);
+        }
     }
 }

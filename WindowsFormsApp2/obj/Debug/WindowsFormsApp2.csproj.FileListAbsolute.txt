@@ -250,3 +250,5 @@ C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsF
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditCourseForm.resources
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ManageCourseForm.resources
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PrintCourseForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddScoreForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.RemoveScoreForm.resources
