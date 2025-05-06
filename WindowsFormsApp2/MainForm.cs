@@ -100,5 +100,29 @@ namespace WindowsFormsApp2
             RemoveScoreForm removeScoreForm = new RemoveScoreForm();
             removeScoreForm.Show(this);
         }
+
+        private void manageScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageScoreForm manageScoreForm = new ManageScoreForm();
+            manageScoreForm.Show(this);
+        }
+
+        private void avgScoreByCourseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AvgScorebyCourse avg = new AvgScorebyCourse();
+            avg.Show(this);
+        }
+
+        private void aVGResultByScoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AvgResultbyCourseForm avg = new AvgResultbyCourseForm();
+            avg.Show(this);
+        }
+
+        private void staticsResultToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StaticsResultForm statics = new StaticsResultForm();
+            statics.Show(this);
+        }
     }
 }

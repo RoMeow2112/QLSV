@@ -252,3 +252,7 @@ C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsF
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.PrintCourseForm.resources
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddScoreForm.resources
 C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.RemoveScoreForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ManageScoreForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AvgScorebyCourse.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AvgResultbyCourseForm.resources
+C:\Users\nguye\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.StaticsResultForm.resources

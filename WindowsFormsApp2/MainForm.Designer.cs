@@ -44,14 +44,15 @@
             this.manageCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sCOREToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.avgScoreByCourseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rESULTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aVGResultByScoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staticsResultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,7 +161,7 @@
             this.addCourseToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCourseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addCourseToolStripMenuItem.Name = "addCourseToolStripMenuItem";
-            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCourseToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.addCourseToolStripMenuItem.Text = "Add Course";
             this.addCourseToolStripMenuItem.Click += new System.EventHandler(this.addCourseToolStripMenuItem_Click);
             // 
@@ -170,7 +171,7 @@
             this.removeCourseToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeCourseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.removeCourseToolStripMenuItem.Name = "removeCourseToolStripMenuItem";
-            this.removeCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removeCourseToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.removeCourseToolStripMenuItem.Text = "Remove Course";
             this.removeCourseToolStripMenuItem.Click += new System.EventHandler(this.removeCourseToolStripMenuItem_Click);
             // 
@@ -180,7 +181,7 @@
             this.editCourseToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editCourseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editCourseToolStripMenuItem.Name = "editCourseToolStripMenuItem";
-            this.editCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editCourseToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.editCourseToolStripMenuItem.Text = "Edit Course";
             this.editCourseToolStripMenuItem.Click += new System.EventHandler(this.editCourseToolStripMenuItem_Click);
             // 
@@ -190,7 +191,7 @@
             this.manageCourseToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.manageCourseToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.manageCourseToolStripMenuItem.Name = "manageCourseToolStripMenuItem";
-            this.manageCourseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageCourseToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.manageCourseToolStripMenuItem.Text = "Manage Course";
             this.manageCourseToolStripMenuItem.Click += new System.EventHandler(this.manageCourseToolStripMenuItem_Click);
             // 
@@ -200,7 +201,7 @@
             this.printToolStripMenuItem1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            this.printToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.printToolStripMenuItem1.Size = new System.Drawing.Size(170, 22);
             this.printToolStripMenuItem1.Text = "Print";
             this.printToolStripMenuItem1.Click += new System.EventHandler(this.printToolStripMenuItem1_Click);
             // 
@@ -210,29 +211,10 @@
             this.addScoreToolStripMenuItem,
             this.removeScoreToolStripMenuItem,
             this.manageScoreToolStripMenuItem,
-            this.avgScoreByCourseToolStripMenuItem,
-            this.printResultToolStripMenuItem});
+            this.avgScoreByCourseToolStripMenuItem});
             this.sCOREToolStripMenuItem.Name = "sCOREToolStripMenuItem";
             this.sCOREToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.sCOREToolStripMenuItem.Text = "SCORE";
-            // 
-            // rESULTToolStripMenuItem
-            // 
-            this.rESULTToolStripMenuItem.Name = "rESULTToolStripMenuItem";
-            this.rESULTToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.rESULTToolStripMenuItem.Text = "RESULT";
-            // 
-            // aDMINToolStripMenuItem
-            // 
-            this.aDMINToolStripMenuItem.Name = "aDMINToolStripMenuItem";
-            this.aDMINToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.aDMINToolStripMenuItem.Text = "ADMIN";
-            this.aDMINToolStripMenuItem.Click += new System.EventHandler(this.aDMINToolStripMenuItem_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // addScoreToolStripMenuItem
             // 
@@ -262,6 +244,7 @@
             this.manageScoreToolStripMenuItem.Name = "manageScoreToolStripMenuItem";
             this.manageScoreToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.manageScoreToolStripMenuItem.Text = "Manage Score";
+            this.manageScoreToolStripMenuItem.Click += new System.EventHandler(this.manageScoreToolStripMenuItem_Click);
             // 
             // avgScoreByCourseToolStripMenuItem
             // 
@@ -271,15 +254,42 @@
             this.avgScoreByCourseToolStripMenuItem.Name = "avgScoreByCourseToolStripMenuItem";
             this.avgScoreByCourseToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
             this.avgScoreByCourseToolStripMenuItem.Text = "Avg Score by Course";
+            this.avgScoreByCourseToolStripMenuItem.Click += new System.EventHandler(this.avgScoreByCourseToolStripMenuItem_Click);
             // 
-            // printResultToolStripMenuItem
+            // rESULTToolStripMenuItem
             // 
-            this.printResultToolStripMenuItem.BackColor = System.Drawing.Color.Blue;
-            this.printResultToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printResultToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.printResultToolStripMenuItem.Name = "printResultToolStripMenuItem";
-            this.printResultToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
-            this.printResultToolStripMenuItem.Text = "Print Result";
+            this.rESULTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aVGResultByScoreToolStripMenuItem,
+            this.staticsResultToolStripMenuItem});
+            this.rESULTToolStripMenuItem.Name = "rESULTToolStripMenuItem";
+            this.rESULTToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.rESULTToolStripMenuItem.Text = "RESULT";
+            // 
+            // aVGResultByScoreToolStripMenuItem
+            // 
+            this.aVGResultByScoreToolStripMenuItem.Name = "aVGResultByScoreToolStripMenuItem";
+            this.aVGResultByScoreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aVGResultByScoreToolStripMenuItem.Text = "AVG Result by Score";
+            this.aVGResultByScoreToolStripMenuItem.Click += new System.EventHandler(this.aVGResultByScoreToolStripMenuItem_Click);
+            // 
+            // staticsResultToolStripMenuItem
+            // 
+            this.staticsResultToolStripMenuItem.Name = "staticsResultToolStripMenuItem";
+            this.staticsResultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.staticsResultToolStripMenuItem.Text = "Statics Result";
+            this.staticsResultToolStripMenuItem.Click += new System.EventHandler(this.staticsResultToolStripMenuItem_Click);
+            // 
+            // aDMINToolStripMenuItem
+            // 
+            this.aDMINToolStripMenuItem.Name = "aDMINToolStripMenuItem";
+            this.aDMINToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.aDMINToolStripMenuItem.Text = "ADMIN";
+            this.aDMINToolStripMenuItem.Click += new System.EventHandler(this.aDMINToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
@@ -321,6 +331,7 @@
         private System.Windows.Forms.ToolStripMenuItem removeScoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageScoreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem avgScoreByCourseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printResultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aVGResultByScoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staticsResultToolStripMenuItem;
     }
 }

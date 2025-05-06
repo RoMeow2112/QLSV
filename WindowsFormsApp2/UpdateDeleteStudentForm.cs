@@ -54,6 +54,7 @@ namespace WindowsFormsApp2
 
                 if (table.Rows.Count > 0)
                 {
+                    textBoxID.Text = table.Rows[0]["id"].ToString();
                     textBoxFname.Text = table.Rows[0]["fname"].ToString();
                     textBoxLname.Text = table.Rows[0]["lname"].ToString();
                     dateTimePicker1.Value = (DateTime)table.Rows[0]["bdate"];
