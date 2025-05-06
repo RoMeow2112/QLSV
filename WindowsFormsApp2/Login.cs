@@ -26,7 +26,8 @@ namespace WindowsFormsApp2
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            SqlCommand command = new SqlCommand("SELECT * FROM account WHERE username = @User AND password = @Pass", db.getConnection);
+            // Sửa lại câu truy vấn để sử dụng bảng hr thay vì account
+            SqlCommand command = new SqlCommand("SELECT * FROM hr WHERE uname = @User AND pwd = @Pass", db.getConnection);
 
             command.Parameters.Add("@User", SqlDbType.VarChar).Value = username;
             command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = password;
@@ -34,29 +35,44 @@ namespace WindowsFormsApp2
             adapter.SelectCommand = command;
             adapter.Fill(table);
 
-            return table.Rows.Count > 0; 
+            return table.Rows.Count > 0;
         }
+
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Please enter both Username and Password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; 
+                return;
             }
 
             if (VerifyLogin(txtUsername.Text, txtPassword.Text))
             {
-                MainForm mainForm = new MainForm();
-                mainForm.FormClosed += (s, args) => Application.Exit();
-                mainForm.Show(this);
-                this.Hide();
+                // Kiểm tra xem người dùng chọn "Student" hay "Human Resource"
+                if (radioButtonStudent.Checked)
+                {
+                    // Nếu chọn "Student", hiển thị MainForm
+                    MainForm mainForm = new MainForm();
+                    mainForm.FormClosed += (s, args) => Application.Exit();
+                    mainForm.Show(this);
+                }
+                else if (radioButtonHumanResource.Checked)
+                {
+                    // Nếu chọn "Human Resource", hiển thị HRForm
+                    HRForm hrForm = new HRForm();
+                    hrForm.FormClosed += (s, args) => Application.Exit();
+                    hrForm.Show(this);
+                }
+
+                this.Hide(); // Ẩn form Login sau khi đăng nhập thành công
             }
             else
             {
                 MessageBox.Show("Invalid Username Or Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -66,51 +82,8 @@ namespace WindowsFormsApp2
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
-            string confirmPassword = txtConfirmPassword.Text.Trim();
-
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Username and Password cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (checkBoxRegister.Checked)
-            {
-                if (string.IsNullOrEmpty(confirmPassword))
-                {
-                    MessageBox.Show("Please confirm your password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (password != confirmPassword)
-                {
-                    MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                Account account = new Account();
-                if (account.RegisterUser(username, password))
-                {
-                    MessageBox.Show("New user registered successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Error registering user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please check 'Register' to register.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void checkBoxRegister_CheckedChanged(object sender, EventArgs e)
-        {
-            bool isChecked = checkBoxRegister.Checked;
-            label4.Visible = isChecked;
-            txtConfirmPassword.Visible = isChecked;
+            RegisterForm register = new RegisterForm();
+            register.Show(this);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

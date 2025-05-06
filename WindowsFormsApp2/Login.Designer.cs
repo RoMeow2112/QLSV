@@ -38,10 +38,9 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxRegister = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.radioButtonStudent = new System.Windows.Forms.RadioButton();
+            this.radioButtonHumanResource = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label1
@@ -134,39 +133,31 @@
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // checkBoxRegister
+            // radioButtonStudent
             // 
-            this.checkBoxRegister.AutoSize = true;
-            this.checkBoxRegister.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxRegister.ForeColor = System.Drawing.Color.White;
-            this.checkBoxRegister.Location = new System.Drawing.Point(41, 291);
-            this.checkBoxRegister.Name = "checkBoxRegister";
-            this.checkBoxRegister.Size = new System.Drawing.Size(90, 25);
-            this.checkBoxRegister.TabIndex = 9;
-            this.checkBoxRegister.Text = "Register";
-            this.checkBoxRegister.UseVisualStyleBackColor = true;
-            this.checkBoxRegister.CheckedChanged += new System.EventHandler(this.checkBoxRegister_CheckedChanged);
+            this.radioButtonStudent.AutoSize = true;
+            this.radioButtonStudent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonStudent.ForeColor = System.Drawing.Color.White;
+            this.radioButtonStudent.Location = new System.Drawing.Point(63, 208);
+            this.radioButtonStudent.Name = "radioButtonStudent";
+            this.radioButtonStudent.Size = new System.Drawing.Size(73, 23);
+            this.radioButtonStudent.TabIndex = 9;
+            this.radioButtonStudent.TabStop = true;
+            this.radioButtonStudent.Text = "Student";
+            this.radioButtonStudent.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // radioButtonHumanResource
             // 
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(44, 208);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 22);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Password: ";
-            this.label4.Visible = false;
-            // 
-            // txtConfirmPassword
-            // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(145, 208);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(100, 20);
-            this.txtConfirmPassword.TabIndex = 11;
-            this.txtConfirmPassword.Visible = false;
+            this.radioButtonHumanResource.AutoSize = true;
+            this.radioButtonHumanResource.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonHumanResource.ForeColor = System.Drawing.Color.White;
+            this.radioButtonHumanResource.Location = new System.Drawing.Point(145, 208);
+            this.radioButtonHumanResource.Name = "radioButtonHumanResource";
+            this.radioButtonHumanResource.Size = new System.Drawing.Size(131, 23);
+            this.radioButtonHumanResource.TabIndex = 10;
+            this.radioButtonHumanResource.TabStop = true;
+            this.radioButtonHumanResource.Text = "Human Resource";
+            this.radioButtonHumanResource.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
@@ -174,9 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(566, 362);
-            this.Controls.Add(this.txtConfirmPassword);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.checkBoxRegister);
+            this.Controls.Add(this.radioButtonHumanResource);
+            this.Controls.Add(this.radioButtonStudent);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnCancel);
@@ -205,10 +195,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBoxRegister;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.RadioButton radioButtonStudent;
+        private System.Windows.Forms.RadioButton radioButtonHumanResource;
     }
 }
 
