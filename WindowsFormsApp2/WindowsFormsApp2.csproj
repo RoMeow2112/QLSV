@@ -242,6 +242,12 @@
       <DependentUpon>AvgScorebyCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Contact.cs" />
+    <Compile Include="ContactListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactListForm.Designer.cs">
+      <DependentUpon>ContactListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Course.cs" />
     <Compile Include="DB.cs" />
     <Compile Include="EditContact.cs">
@@ -255,6 +261,18 @@
     </Compile>
     <Compile Include="EditCourseForm.Designer.cs">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditInfo.Designer.cs">
+      <DependentUpon>EditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SelectContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SelectContact.Designer.cs">
+      <DependentUpon>Form_SelectContact.cs</DependentUpon>
     </Compile>
     <Compile Include="Group.cs" />
     <Compile Include="HRForm.cs">
@@ -372,11 +390,20 @@
     <EmbeddedResource Include="AvgScorebyCourse.resx">
       <DependentUpon>AvgScorebyCourse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ContactListForm.resx">
+      <DependentUpon>ContactListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditContact.resx">
       <DependentUpon>EditContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditCourseForm.resx">
       <DependentUpon>EditCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditInfo.resx">
+      <DependentUpon>EditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SelectContact.resx">
+      <DependentUpon>Form_SelectContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HRForm.resx">
       <DependentUpon>HRForm.cs</DependentUpon>

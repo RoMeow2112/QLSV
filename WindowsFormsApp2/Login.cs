@@ -19,16 +19,18 @@ namespace WindowsFormsApp2
             InitializeComponent();
         }
 
-        private bool VerifyLogin(string username, string password)
+        private bool VerifyLogin(string username, string password, bool isHumanResource)
         {
             MY_DB db = new MY_DB();
-
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            // Sửa lại câu truy vấn để sử dụng bảng hr thay vì account
-            SqlCommand command = new SqlCommand("SELECT * FROM hr WHERE uname = @User AND pwd = @Pass", db.getConnection);
+            // Nếu đăng nhập Human Resource, kiểm tra thêm role = 'HR'
+            string query = isHumanResource
+                ? "SELECT * FROM hr WHERE uname = @User AND pwd = @Pass AND role = 'HR'"
+                : "SELECT * FROM hr WHERE uname = @User AND pwd = @Pass";
 
+            SqlCommand command = new SqlCommand(query, db.getConnection);
             command.Parameters.Add("@User", SqlDbType.VarChar).Value = username;
             command.Parameters.Add("@Pass", SqlDbType.VarChar).Value = password;
 
@@ -38,6 +40,7 @@ namespace WindowsFormsApp2
             return table.Rows.Count > 0;
         }
 
+        public static string CurrentUsername;
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -47,34 +50,38 @@ namespace WindowsFormsApp2
                 return;
             }
 
-            if (VerifyLogin(txtUsername.Text, txtPassword.Text))
+            bool isHR = radioButtonHumanResource.Checked;
+            bool isStudent = radioButtonStudent.Checked;
+
+            if (!isHR && !isStudent)
             {
-                // Kiểm tra xem người dùng chọn "Student" hay "Human Resource"
-                if (radioButtonStudent.Checked)
+                MessageBox.Show("Please select a role (Student or Human Resource).", "Role Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (VerifyLogin(txtUsername.Text, txtPassword.Text, isHR))
+            {
+                CurrentUsername = txtUsername.Text;
+                if (isStudent)
                 {
-                    // Nếu chọn "Student", hiển thị MainForm
                     MainForm mainForm = new MainForm();
                     mainForm.FormClosed += (s, args) => Application.Exit();
                     mainForm.Show(this);
                 }
-                else if (radioButtonHumanResource.Checked)
+                else if (isHR)
                 {
-                    // Nếu chọn "Human Resource", hiển thị HRForm
                     HRForm hrForm = new HRForm();
                     hrForm.FormClosed += (s, args) => Application.Exit();
                     hrForm.Show(this);
                 }
 
-                this.Hide(); // Ẩn form Login sau khi đăng nhập thành công
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Invalid Username Or Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid Username Or Password or Role.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();

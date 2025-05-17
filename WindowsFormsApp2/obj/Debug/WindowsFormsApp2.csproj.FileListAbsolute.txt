@@ -282,3 +282,6 @@ C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.HRF
 C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.RegisterForm.resources
 C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddContact.resources
 C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditContact.resources
+C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form_SelectContact.resources
+C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.ContactListForm.resources
+C:\Users\nguye\Source\Repos\QLSV\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.EditInfo.resources

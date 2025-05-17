@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,11 +13,34 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    public partial class HRForm: Form
+    public partial class HRForm : Form
     {
         public HRForm()
         {
             InitializeComponent();
+        }
+
+        private string GetLastName(string username)
+        {
+            string lastName = "";
+            MY_DB db = new MY_DB();
+            string query = "SELECT l_name FROM hr WHERE uname = @username";
+            using (SqlCommand cmd = new SqlCommand(query, db.getConnection))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                try
+                {
+                    db.openConnection();
+                    var result = cmd.ExecuteScalar();
+                    if (result != null)
+                        lastName = result.ToString();
+                }
+                finally
+                {
+                    db.closeConnection();
+                }
+            }
+            return lastName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -127,6 +151,7 @@ namespace WindowsFormsApp2
         {
             LoadGroupList(cbSelectGroupEdit);
             LoadGroupList(cbSelectGroupRemove);
+            lblWelcome.Text = $"Welcome {GetLastName(Login.CurrentUsername)}";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -179,5 +204,69 @@ namespace WindowsFormsApp2
             txtEditGroupName.Clear();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (var selectForm = new Form_SelectContact())
+            {
+                // Subscribe to the selection event
+                selectForm.OnContactSelected += row =>
+                {
+                    txtID.Text = row["id"].ToString();
+                };
+
+                // Show as modal dialog to wait for selection
+                selectForm.ShowDialog(this);
+            }
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!int.TryParse(txtID.Text, out int contactId))
+            {
+                MessageBox.Show("Vui lòng nhập ID hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirm = MessageBox.Show("Xóa contact có ID = " + contactId + "?", "Xác nhận",
+                                          MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirm != DialogResult.Yes) return;
+
+            MY_DB db = new MY_DB();
+
+            using (var cmd = new SqlCommand("DELETE FROM mycontact WHERE id = @id", db.getConnection))
+            {
+                cmd.Parameters.AddWithValue("@id", contactId);
+                try
+                {
+                    db.openConnection();
+                    int rows = cmd.ExecuteNonQuery();
+                    MessageBox.Show(rows > 0 ? "Xóa thành công." : "Không tìm thấy contact.",
+                                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtID.Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi xóa:\n" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    db.closeConnection();
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ContactListForm contactListForm = new ContactListForm();
+            contactListForm.Show(this);
+            
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            EditInfo editInfo = new EditInfo(Login.CurrentUsername);
+            editInfo.Show(this);
+        }
     }
 }

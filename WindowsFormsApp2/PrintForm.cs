@@ -72,11 +72,21 @@ namespace WindowsFormsApp2
         {
             PrintDialog printDialog = new PrintDialog();
             PrintDocument printDoc = new PrintDocument();
+
             printDoc.PrintPage += (s, ev) =>
             {
-                Bitmap bm = new Bitmap(dataGridView1.Width, dataGridView1.Height);
-                dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, dataGridView1.Width, dataGridView1.Height));
+                // Tạo bitmap đủ lớn chứa toàn bộ nội dung DataGridView
+                int height = dataGridView1.RowCount * dataGridView1.RowTemplate.Height + dataGridView1.ColumnHeadersHeight;
+                int width = dataGridView1.Width;
+
+                Bitmap bm = new Bitmap(width, height);
+                dataGridView1.DrawToBitmap(bm, new Rectangle(0, 0, width, height));
+
+                // Vẽ bitmap lên trang in
                 ev.Graphics.DrawImage(bm, 0, 0);
+
+                // Không có trang tiếp theo
+                ev.HasMorePages = false;
             };
 
             printDialog.Document = printDoc;
@@ -85,6 +95,7 @@ namespace WindowsFormsApp2
                 printDoc.Print();
             }
         }
+
 
         private void PrintForm_Load(object sender, EventArgs e)
         {
