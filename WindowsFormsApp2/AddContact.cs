@@ -22,13 +22,15 @@ namespace WindowsFormsApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             string fname = txtFirstName.Text.Trim();
             string lname = txtLastName.Text.Trim();
             int groupId = Convert.ToInt32(cbGroup.SelectedValue);
             string phone = txtPhone.Text.Trim();
             string email = txtEmail.Text.Trim();
             string address = txtAddress.Text.Trim();
-            int userId = Convert.ToInt32(txtUID.Text);
+            ContactListForm contactListForm = new ContactListForm();
+            int userId = contactListForm.GetUidCurrentUser();
 
             MemoryStream pic = new MemoryStream();
             pictureBoxImage.Image.Save(pic, pictureBoxImage.Image.RawFormat);
@@ -56,15 +58,28 @@ namespace WindowsFormsApp2
     }
         private void LoadGroupToComboBox(ComboBox comboBox)
         {
-            MY_DB db = new MY_DB();
-            SqlDataAdapter adapter = new SqlDataAdapter("SELECT id, name FROM mygroups", db.getConnection);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
+            ContactListForm contactListForm = new ContactListForm();
+            int userId = contactListForm.GetUidCurrentUser(); // Hoặc lấy currentUserId từ biến lưu sẵn
 
-            comboBox.DataSource = table;
-            comboBox.DisplayMember = "name";  // Hiển thị tên nhóm
-            comboBox.ValueMember = "id";      // Lưu giá trị là id
+            MY_DB db = new MY_DB();
+            string sql = "SELECT id, name FROM mygroups WHERE userid = @uid";
+
+            using (SqlCommand cmd = new SqlCommand(sql, db.getConnection))
+            {
+                cmd.Parameters.AddWithValue("@uid", userId);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    comboBox.DataSource = null; // Reset lại
+                    comboBox.DataSource = table;
+                    comboBox.DisplayMember = "name";
+                    comboBox.ValueMember = "id";
+                }
+            }
         }
+
 
         private void FormAddContact_Load(object sender, EventArgs e)
         {

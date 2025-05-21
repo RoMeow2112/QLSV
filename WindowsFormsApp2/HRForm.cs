@@ -59,6 +59,9 @@ namespace WindowsFormsApp2
         {
             string groupName = txtgroupname.Text.Trim();
 
+            ContactListForm contactListForm = new ContactListForm();
+            int userId = contactListForm.GetUidCurrentUser();
+
             if (string.IsNullOrEmpty(groupName))
             {
                 MessageBox.Show("Vui lòng nhập tên nhóm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -67,9 +70,13 @@ namespace WindowsFormsApp2
 
             MY_DB db = new MY_DB();
 
-            string query = "INSERT INTO mygroups (name) VALUES (@name)";
+            // Sửa câu SQL chèn thêm userid
+            string query = "INSERT INTO mygroups (name, userid) VALUES (@name, @userid)";
             SqlCommand cmd = new SqlCommand(query, db.getConnection);
             cmd.Parameters.AddWithValue("@name", groupName);
+
+            // Giả sử bạn có biến currentUserId, thêm vào đây
+            cmd.Parameters.AddWithValue("@userid", userId);
 
             try
             {
@@ -95,6 +102,7 @@ namespace WindowsFormsApp2
             RefreshAllGroupComboboxes();
             ClearAllTextboxes();
         }
+
 
         private void button7_Click(object sender, EventArgs e)
         {

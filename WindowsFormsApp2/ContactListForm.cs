@@ -32,38 +32,96 @@ namespace WindowsFormsApp2
             LoadAllContacts();
         }
 
-        private void LoadGroups()
+        private string CurrentUsername; // giả sử bạn đã gán username hiện tại ở đây
+
+        // Hàm lấy user_id từ bảng HR theo CurrentUsername
+        public int GetUidCurrentUser()
         {
             var db = new MY_DB();
-            using (var da = new SqlDataAdapter("SELECT id, name FROM mygroups", db.getConnection))
+            string sql = "SELECT uid FROM HR WHERE uname = @uname";
+            using (var cmd = new SqlCommand(sql, db.getConnection))
             {
-                var dt = new DataTable();
-                da.Fill(dt);
-                listBoxGroups.DisplayMember = "name";
-                listBoxGroups.ValueMember = "id";
-                listBoxGroups.DataSource = dt;
+                cmd.Parameters.AddWithValue("@uname", Login.CurrentUsername);
+                db.openConnection();
+                var result = cmd.ExecuteScalar();
+                db.closeConnection();
+                return result != null ? Convert.ToInt32(result) : 0;
+            }
+        }
+
+        private void LoadGroups()
+        {
+            int userId = GetUidCurrentUser();
+            var db = new MY_DB();
+            string sql = "SELECT id, name FROM mygroups WHERE userid = @uid";
+            using (var cmd = new SqlCommand(sql, db.getConnection))
+            {
+                cmd.Parameters.AddWithValue("@uid", userId);
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    var dt = new DataTable();
+                    da.Fill(dt);
+                    listBoxGroups.DisplayMember = "name";
+                    listBoxGroups.ValueMember = "id";
+                    listBoxGroups.DataSource = dt;
+                }
             }
         }
 
         private void LoadAllContacts()
         {
+            int userId = GetUidCurrentUser();
             var db = new MY_DB();
             string sql = @"
-                SELECT c.fname   AS [First Name],
-                       c.lname   AS [Last Name],
-                       g.name    AS [Group],
-                       c.phone,
-                       c.email,
-                       c.address,
-                       c.pic
-                FROM mycontact c
-                LEFT JOIN mygroups g ON c.group_id = g.id";
+        SELECT c.fname AS [First Name],
+               c.lname AS [Last Name],
+               g.name AS [Group],
+               c.phone,
+               c.email,
+               c.address,
+               c.pic
+        FROM mycontact c
+        LEFT JOIN mygroups g ON c.group_id = g.id
+        WHERE c.userid = @uid";
 
-            using (var da = new SqlDataAdapter(sql, db.getConnection))
+            using (var cmd = new SqlCommand(sql, db.getConnection))
             {
-                var dt = new DataTable();
-                da.Fill(dt);
-                dataGridViewContacts.DataSource = dt;
+                cmd.Parameters.AddWithValue("@uid", userId);
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    var dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridViewContacts.DataSource = dt;
+                }
+            }
+        }
+
+        private void LoadContactsByGroup(int groupId)
+        {
+            int userId = GetUidCurrentUser();
+            var db = new MY_DB();
+            string sql = @"
+        SELECT c.fname AS [First Name],
+               c.lname AS [Last Name],
+               g.name AS [Group],
+               c.phone,
+               c.email,
+               c.address,
+               c.pic
+        FROM mycontact c
+        LEFT JOIN mygroups g ON c.group_id = g.id
+        WHERE c.group_id = @gid AND c.userid = @uid";
+
+            using (var cmd = new SqlCommand(sql, db.getConnection))
+            {
+                cmd.Parameters.AddWithValue("@gid", groupId);
+                cmd.Parameters.AddWithValue("@uid", userId);
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    var dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridViewContacts.DataSource = dt;
+                }
             }
         }
 
@@ -73,32 +131,7 @@ namespace WindowsFormsApp2
                 LoadContactsByGroup(groupId);
         }
 
-        private void LoadContactsByGroup(int groupId)
-        {
-            var db = new MY_DB();
-            string sql = @"
-                SELECT c.fname   AS [First Name],
-                       c.lname   AS [Last Name],
-                       g.name    AS [Group],
-                       c.phone,
-                       c.email,
-                       c.address,
-                       c.pic
-                FROM mycontact c
-                LEFT JOIN mygroups g ON c.group_id = g.id
-                WHERE c.group_id = @gid";
 
-            using (var cmd = new SqlCommand(sql, db.getConnection))
-            {
-                cmd.Parameters.AddWithValue("@gid", groupId);
-                using (var da = new SqlDataAdapter(cmd))
-                {
-                    var dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridViewContacts.DataSource = dt;
-                }
-            }
-        }
 
         private void dataGridViewContacts_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
